@@ -69,9 +69,9 @@ bot.on('text', async ctx => {
 
     try {
         const response = await openai.createChatCompletion({
-            model: 'gpt-3.5-turbo',
-            messages: dialog,
-            max_tokens: 1000
+          model: "gpt-3.5-turbo",
+          messages: dialog,
+          max_tokens: 1000,
         });
         const { message } = response.data.choices[0];
         const { content } = message;
